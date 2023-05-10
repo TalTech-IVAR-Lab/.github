@@ -1,4 +1,4 @@
-## Welcome to TalTech IVAR Lab's GitHub 👋
+## Welcome 👋
 
 We study extended reality technologies and their applications in revolutionizing industrial workflows.
 
