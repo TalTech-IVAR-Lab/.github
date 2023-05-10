@@ -2,4 +2,4 @@
 
 We study Virtual and Augmented Reality technologies and their applications in revolutionizing industrial workflows.
 
-Check out [our official website](https://ivar.ttu.ee) to learn more about our ongoing projects and activities.
+Check out <a href="https://ivar.taltech.ee" target="_blank">our official website</a> to learn more about our ongoing projects and activities.
