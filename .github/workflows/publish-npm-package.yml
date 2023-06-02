@@ -1,0 +1,28 @@
+# Fallback manual workflow for publishing the NPM package to the registry if semantic release publishing fails.
+name: Publish NPM package
+
+on:
+  workflow_call:
+    inputs:
+      tag:
+        description: "The tag to publish the package with."
+        default: 'develop'
+        required: false
+        type: string
+
+jobs:
+  publish:
+    name: Publish NPM package
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "v18"
+          registry-url: ${{ secrets.NPM_REGISTRY }}
+      - name: Publish package to NPM registry
+        run: npm publish --tag ${{ github.event.inputs.tag }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
